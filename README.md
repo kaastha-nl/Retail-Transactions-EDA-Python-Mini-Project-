@@ -14,25 +14,25 @@ All analysis was completed in Google Colab using Python (Pandas, Matplotlib, Sea
 
 ---
 
- ## Repository Structure
- retail-analysis-python/
-│
-├─ data/
-│ └─ Retail_Transactions_Dataset.csv (NOT uploaded due to 161 MB size)
-│
-├─ notebooks/
-│ └─ retail_analysis.ipynb
-│
-├─ scripts/
-│ └─ RetailAnalysis.py
-│
-├─ visuals/
-│ ├─ transactions_per_city.png
-│ ├─ payment_method_distribution.png
-│ ├─ monthly_revenue_trend.png
-│ └─ season_customercategory_heatmap.png
-│
-└─ README.md
+ ## Repository Structure <br>
+ retail-analysis-python/ <br>
+│ <br>
+├─ data/ <br>
+│ └─ Retail_Transactions_Dataset.csv (NOT uploaded due to 161 MB size) <br>
+│ <br>
+├─ notebooks/ <br>
+│ └─ retail_analysis.ipynb <br>
+│ <br>
+├─ scripts/ <br>
+│ └─ RetailAnalysis.py <br>
+│ <br>
+├─ visuals/ <br>
+│ ├─ transactions_per_city.png <br>
+│ ├─ payment_method_distribution.png <br>
+│ ├─ monthly_revenue_trend.png <br>
+│ └─ season_customercategory_heatmap.png <br>
+│ <br>
+└─ README.md <br>
 
 
 ---
@@ -87,7 +87,8 @@ df["Date"] = pd.to_datetime(df["Date"])
 df["Year"] = df["Date"].dt.year
 df["Month"] = df["Date"].dt.month
 df["DayOfWeek"] = df["Date"].dt.day_name()
-df = df.drop_duplicates()```python
+df = df.drop_duplicates()
+```
 
 ---
 
@@ -118,7 +119,8 @@ Example code included:
 ```python
 sns.barplot(x=avg_spend_season.index, y=avg_spend_season)
 sns.countplot(data=df, x="Season", hue="Store_Type")
-sns.heatmap(revenue_by_season, annot=True, cmap="Blues")```python
+sns.heatmap(revenue_by_season, annot=True, cmap="Blues")
+```
 
 ---
 
