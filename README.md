@@ -41,11 +41,11 @@ All analysis was completed in Google Colab using Python (Pandas, Matplotlib, Sea
 
 To explore and analyze retail transaction data and derive insights around:
 
-✔ Customer purchasing patterns
-✔ Best-performing products
-✔ Seasonal & regional trends
-✔ Promotion & discount impact on revenue
-✔ Payment behavior and store-type comparisons
+Customer purchasing patterns <br>
+Best-performing products <br>
+Seasonal & regional trends <br>
+Promotion & discount impact on revenue <br>
+Payment behavior and store-type comparisons <br>
 
 The goal is to translate raw data into business-ready recommendations.
 
@@ -82,6 +82,7 @@ The goal is to translate raw data into business-ready recommendations.
 | Missing values       | Reviewed & validated completeness      |
 
 Example code included:
+```python
 df["Date"] = pd.to_datetime(df["Date"])
 df["Year"] = df["Date"].dt.year
 df["Month"] = df["Date"].dt.month
@@ -114,6 +115,7 @@ df = df.drop_duplicates()
 
 Example code included:
 
+```python
 sns.barplot(x=avg_spend_season.index, y=avg_spend_season)
 sns.countplot(data=df, x="Season", hue="Store_Type")
 sns.heatmap(revenue_by_season, annot=True, cmap="Blues")
