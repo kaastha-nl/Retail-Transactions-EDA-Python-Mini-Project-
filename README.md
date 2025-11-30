@@ -1,4 +1,4 @@
-Retail Transactions EDA (Python Mini Project)
+## Retail Sales Analytics EDA 
 
 This repository contains a full Exploratory Data Analysis (EDA) of a retail transactions dataset as part of the PGDSBA (IITG) Program.
   
@@ -14,7 +14,7 @@ All analysis was completed in Google Colab using Python (Pandas, Matplotlib, Sea
 
 ---
 
- 📁 Repository Structure
+ ## Repository Structure
  retail-analysis-python/
 │
 ├─ data/
@@ -37,7 +37,133 @@ All analysis was completed in Google Colab using Python (Pandas, Matplotlib, Sea
 
 ---
 
-Dataset Access (Important)
+## OBJECTIVE
+
+To explore and analyze retail transaction data and derive insights around:
+
+✔ Customer purchasing patterns
+✔ Best-performing products
+✔ Seasonal & regional trends
+✔ Promotion & discount impact on revenue
+✔ Payment behavior and store-type comparisons
+
+The goal is to translate raw data into business-ready recommendations.
+
+---
+
+## DATASET OVERVIEW
+
+| Feature             | Description                                        |
+| ------------------- | -------------------------------------------------- |
+| `Transaction_ID`    | Unique ID for each sale                            |
+| `Date`              | Date of purchase                                   |
+| `Customer_Name`     | Customer identifier                                |
+| `Customer_Category` | Tier/segment of customer (e.g. Gold/Silver/Bronze) |
+| `Total_Items`       | Quantity purchased                                 |
+| `Total_Cost`        | Total amount spent                                 |
+| `Product`           | Product purchased                                  |
+| `Payment_Method`    | Credit card / Cash / Wallet / UPI etc              |
+| `Store_Type`        | Online vs Physical store                           |
+| `Discount_Applied`  | Whether discount was applied                       |
+| `Promotion`         | Type of promotion                                  |
+| `City`              | Location of purchase                               |
+| `Season`            | Season during the transaction                      |
+
+---
+
+## DATA CLEANING & FEATURE ENGINEERING
+
+| Step                 | Action                                 |
+| -------------------- | -------------------------------------- |
+| Handle dates         | Converted `Date` → datetime format     |
+| Time-based breakdown | Extracted `Year`, `Month`, `DayOfWeek` |
+| Quality checks       | Removed duplicates                     |
+| Grouping logic       | Customer & season segmentation         |
+| Missing values       | Reviewed & validated completeness      |
+
+Example code included:
+df["Date"] = pd.to_datetime(df["Date"])
+df["Year"] = df["Date"].dt.year
+df["Month"] = df["Date"].dt.month
+df["DayOfWeek"] = df["Date"].dt.day_name()
+df = df.drop_duplicates()
+
+---
+
+## KEY INSIGHTS
+
+| Category            | Insight                                               |
+| ------------------- | ----------------------------------------------------- |
+|  Sales Trend      | Seasonal patterns clearly influence spending          |
+|  Store Preference | Certain seasons favor specific store types            |
+|  Top Products     | Few product categories dominate purchases             |
+|  Payment Behavior | Payment preference varies by customer tier            |
+|  Promotions       | Some promotions generate significantly higher revenue |
+
+---
+
+##  VISUAL INSIGHTS
+
+| Visualization                        | What it Shows                                   |
+| ------------------------------------ | ----------------------------------------------- |
+| Seasonal Spend Bar Chart             | Which seasons generate highest revenue          |
+| Transactions per City                | Location-based demand distribution              |
+| Payment Method Pie Chart             | Customer preference in payment behaviour        |
+| Yearly Revenue Trend Line            | Revenue growth or decline over time             |
+| Heatmap (Season × Customer Category) | Which customer groups spend more in each season |
+
+Example code included:
+
+sns.barplot(x=avg_spend_season.index, y=avg_spend_season)
+sns.countplot(data=df, x="Season", hue="Store_Type")
+sns.heatmap(revenue_by_season, annot=True, cmap="Blues")
+
+---
+
+## TOP FINDINGS
+
+* **Season with highest revenue:**
+  → (Insert result here once extracted)
+
+* **Most profitable promotion type:**
+  → (Insert best performing promo)
+
+* **Top customer category by spend:**
+  → (Insert Gold/Silver/Bronze comparison)
+
+* **City with the highest number of transactions:**
+  → (Insert top city name)
+
+* **Preferred payment method overall:**
+  → (Based on % values from output)
+
+---
+
+## BUSINESS RECOMMENDATIONS
+
+| Recommendation                                           | Why it Matters                                   |
+| -------------------------------------------------------- | ------------------------------------------------ |
+| Increase inventory & marketing during peak season        | Maximizes revenue where demand is proven highest |
+| Scale the highest-performing promotion                   | Faster revenue lift with existing customer base  |
+| Target Gold category customers with loyalty rewards      | Highest average spending → improve retention     |
+| Push online store campaigns during strong digital months | Seasonal preference supports conversion growth   |
+| Optimize payment gateway for most preferred method       | Reduces checkout friction → increases sales      |
+
+These insights could guide real strategic decisions in **pricing, promotions, inventory allocation, marketing & store planning**.
+
+---
+
+## TECH STACK
+
+| Tool                     | Purpose                         |
+| ------------------------ | ------------------------------- |
+| **Python**               | Core analysis                   |
+| **Pandas / NumPy**       | Data manipulation & aggregation |
+| **Matplotlib / Seaborn** | Visual storytelling             |
+| **Jupyter/Google Colab** | Notebook execution              |
+
+
+---
 
 The dataset (`Retail_Transactions_Dataset.csv`) is 161 MB, which is too large for GitHub.
 
