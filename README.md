@@ -118,7 +118,7 @@ Example code included:
 ```python
 sns.barplot(x=avg_spend_season.index, y=avg_spend_season)
 sns.countplot(data=df, x="Season", hue="Store_Type")
-sns.heatmap(revenue_by_season, annot=True, cmap="Blues")
+sns.heatmap(revenue_by_season, annot=True, cmap="Blues")```python
 
 ---
 
