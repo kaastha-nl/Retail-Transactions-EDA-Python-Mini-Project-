@@ -87,7 +87,7 @@ df["Date"] = pd.to_datetime(df["Date"])
 df["Year"] = df["Date"].dt.year
 df["Month"] = df["Date"].dt.month
 df["DayOfWeek"] = df["Date"].dt.day_name()
-df = df.drop_duplicates()
+df = df.drop_duplicates()```python
 
 ---
 
