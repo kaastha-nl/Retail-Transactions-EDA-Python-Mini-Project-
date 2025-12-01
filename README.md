@@ -1,53 +1,44 @@
 ## Retail Sales Analytics EDA 
 
-This repository contains a full Exploratory Data Analysis (EDA) of a retail transactions dataset as part of the PGDSBA (IITG) Program.
-  
-The goal is to uncover insights related to:
+## Project Motivation
 
-- Customer behavior  
-- Promotion performance  
-- Seasonal trends  
-- Revenue distribution  
-- Product-level patterns  
+Retail businesses rely heavily on customer behaviour, seasonal purchasing cycles, promotional effectiveness, and city-wise demand. The objective of this project is to analyze a real retail transaction dataset to uncover meaningful patterns that could guide business decisions such as inventory planning, marketing focus areas, promotional strategy optimisation and customer segmentation.
 
-All analysis was completed in Google Colab using Python (Pandas, Matplotlib, Seaborn).
+This project demonstrates end-to-end exploratory analysis, data cleaning, feature enrichment, insight extraction and visualisation to better understand what drives revenue and purchase behaviour in retail environments as part of the PGDSBA (IITG) Program.
 
 ---
 
- ## Repository Structure <br>
- retail-analysis-python/ <br>
-│ <br>
-├─ data/ <br>
-│ └─ Retail_Transactions_Dataset.csv (NOT uploaded due to 161 MB size) <br>
-│ <br>
-├─ notebooks/ <br>
-│ └─ retail_analysis.ipynb <br>
-│ <br>
-├─ scripts/ <br>
-│ └─ RetailAnalysis.py <br>
-│ <br>
-├─ visuals/ <br>
-│ ├─ transactions_per_city.png <br>
-│ ├─ payment_method_distribution.png <br>
-│ ├─ monthly_revenue_trend.png <br>
-│ └─ season_customercategory_heatmap.png <br>
-│ <br>
-└─ README.md <br>
+## Python Libraries Used
+
+pandas, numpy
+
+matplotlib, seaborn
+
+---
+
+## Repository Structure <br>
+ 
+Retail_Sales_Analytics_EDA.ipynb | Jupyter notebook containing all analysis, data cleaning and visual output
+visuals/                         | Folder containing exported plots used for interpretation
+README.md                        | Documentation describing objectives, approach and results
+scripts/                         | contains retail_analysis.py file
+Dataset used                     | Retail_Transactions_Dataset.csv
+
+The dataset (`Retail_Transactions_Dataset.csv`) is 161 MB, which is too large for GitHub.
+
+You can download it here:
+
+[Download Dataset from Dropbox](https://www.dropbox.com/scl/fi/9xyxc2t07fqjm47va8gt8/Retail_Transactions_Dataset.csv?rlkey=9uur3b5u5q90i80zb7i6t9kgq&st=mnwofjv7&dl=0)
 
 
 ---
 
-## OBJECTIVE
+## Understanding the Business Context
 
-To explore and analyze retail transaction data and derive insights around:
+The dataset represents retail store transactions across multiple cities with details on products sold, customer categories, pricing, discounts, promotions, payment methods and seasons.
 
-Customer purchasing patterns <br>
-Best-performing products <br>
-Seasonal & regional trends <br>
-Promotion & discount impact on revenue <br>
-Payment behavior and store-type comparisons <br>
-
-The goal is to translate raw data into business-ready recommendations.
+A business wouldn't only want to know "what happened" in the past, but also why sales behaved the way they did and where opportunities exist to maximise profitability.
+This analysis aims to support such decision-making through structured exploratory work.
 
 ---
 
@@ -71,7 +62,7 @@ The goal is to translate raw data into business-ready recommendations.
 
 ---
 
-## DATA CLEANING & FEATURE ENGINEERING
+## DATA CLEANING 
 
 | Step                 | Action                                 |
 | -------------------- | -------------------------------------- |
@@ -92,15 +83,25 @@ df = df.drop_duplicates()
 
 ---
 
-## KEY INSIGHTS
+## Analysis Performed
 
-| Category            | Insight                                               |
-| ------------------- | ----------------------------------------------------- |
-|  Sales Trend      | Seasonal patterns clearly influence spending          |
-|  Store Preference | Certain seasons favor specific store types            |
-|  Top Products     | Few product categories dominate purchases             |
-|  Payment Behavior | Payment preference varies by customer tier            |
-|  Promotions       | Some promotions generate significantly higher revenue |
+Total transaction volume and revenue estimation
+
+Top customer segments by spend level
+
+Most purchased product categories
+
+City-wise sales distribution
+
+Average spend with and without discount influence
+
+Promotion effectiveness analysis
+
+Store-type preference by season
+
+Payment method usage trend
+
+Revenue comparison across seasons
 
 ---
 
@@ -124,38 +125,34 @@ sns.heatmap(revenue_by_season, annot=True, cmap="Blues")
 
 ---
 
-## TOP FINDINGS
+## Summary
 
-* **Season with highest revenue:**
-  → (Insert result here once extracted)
+Seasonal demand significantly drives revenue, indicating that marketing efforts must be intensified during peak sales periods.
 
-* **Most profitable promotion type:**
-  → (Insert best performing promo)
+city-wise behaviour reflects strong revenue concentration, suggesting regional targeting and inventory differentiation.
 
-* **Top customer category by spend:**
-  → (Insert Gold/Silver/Bronze comparison)
+Top promotions display measurable revenue impact and can be prioritised in future discount cycles.
 
-* **City with the highest number of transactions:**
-  → (Insert top city name)
+Customer segmentation by spend level highlights where loyalty, retention and reward programs deliver maximum return.
 
-* **Preferred payment method overall:**
-  → (Based on % values from output)
+Payment method preference reveals checkout optimisation opportunities to reduce friction and abandonment.
 
----
+Discounts influence order value positively, implying promotional strategy alignment with purchasing psychology.
 
-## BUSINESS RECOMMENDATIONS
-
-| Recommendation                                           | Why it Matters                                   |
-| -------------------------------------------------------- | ------------------------------------------------ |
-| Increase inventory & marketing during peak season        | Maximizes revenue where demand is proven highest |
-| Scale the highest-performing promotion                   | Faster revenue lift with existing customer base  |
-| Target Gold category customers with loyalty rewards      | Highest average spending → improve retention     |
-| Push online store campaigns during strong digital months | Seasonal preference supports conversion growth   |
-| Optimize payment gateway for most preferred method       | Reduces checkout friction → increases sales      |
-
-These insights could guide real strategic decisions in **pricing, promotions, inventory allocation, marketing & store planning**.
+Store-type and season interaction supports operational capacity planning in both physical and digital channels.
 
 ---
+
+## How to Run this Project
+
+- Download the repository.
+
+- Download Retail_Transactions_Dataset.csv
+
+- Install dependencies:pandas numpy matplotlib seaborn
+
+- Open and run the python notebook
+
 
 ## TECH STACK
 
@@ -165,15 +162,6 @@ These insights could guide real strategic decisions in **pricing, promotions, in
 | **Pandas / NumPy**       | Data manipulation & aggregation |
 | **Matplotlib / Seaborn** | Visual storytelling             |
 | **Jupyter/Google Colab** | Notebook execution              |
-
-
----
-
-The dataset (`Retail_Transactions_Dataset.csv`) is 161 MB, which is too large for GitHub.
-
-You can download it here:
-
-[Download Dataset from Dropbox](https://www.dropbox.com/scl/fi/9xyxc2t07fqjm47va8gt8/Retail_Transactions_Dataset.csv?rlkey=9uur3b5u5q90i80zb7i6t9kgq&st=mnwofjv7&dl=0)
 
 
 
