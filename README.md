@@ -109,13 +109,15 @@ Revenue comparison across seasons
 
 ##  VISUAL INSIGHTS
 
-| Visualization                        | What it Shows                                   |
-| ------------------------------------ | ----------------------------------------------- |
-| Seasonal Spend Bar Chart             | Which seasons generate highest revenue          |
-| Transactions per City                | Location-based demand distribution              |
-| Payment Method Pie Chart             | Customer preference in payment behaviour        |
-| Yearly Revenue Trend Line            | Revenue growth or decline over time             |
-| Heatmap (Season × Customer Category) | Which customer groups spend more in each season |
+
+| Visualization | What it Shows |
+|--------------|----------------|
+| [Seasonal Spend Bar Chart](visuals/avg_spend_season.png) | Seasonal spending patterns and peak revenue periods |
+| [Monthly Revenue Trend](visuals/monthly_revenue_trend.png) | Revenue trend over time, identifying growth or decline |
+| [Payment Method Distribution](visuals/payment_method_distribution.png) | Which payment methods customers prefer most |
+| [Transactions per City](visuals/transaction_per_city.png) | City-wise demand and revenue concentration |
+| [Season × Customer Category Heatmap](visuals/season_customercategory_heatmap.png) | Which customer category spends most in each season |
+
 
 Example code included:
 
