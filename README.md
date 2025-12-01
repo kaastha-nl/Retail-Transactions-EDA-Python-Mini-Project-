@@ -18,11 +18,13 @@ matplotlib, seaborn
 
 ## Repository Structure <br>
  
-Retail_Sales_Analytics_EDA.ipynb | Jupyter notebook containing all analysis, data cleaning and visual output <br>
-visuals/                         | Folder containing exported plots used for interpretation <br>
-README.md                        | Documentation describing objectives, approach and results <br>
-scripts/                         | contains retail_analysis.py file <br>
-Dataset used                     | Retail_Transactions_Dataset.csv <br>
+| File/Folder                         | Description                                                     |
+|------------------------------------|-----------------------------------------------------------------|
+| `Retail_Sales_Analytics_EDA.ipynb` | Jupyter notebook containing all analysis, cleaning & visuals   |
+| `visuals/`                         | Folder containing exported plots for interpretation            |
+| `scripts/`                         | Contains `retail_analysis.py` automation & helper scripts      |
+| `README.md`                        | Documentation describing objectives, approach and results      |
+| `Retail_Transactions_Dataset.csv`  | Dataset used for the analysis (not uploaded if size-restricted)|
 
 The dataset (`Retail_Transactions_Dataset.csv`) is 161 MB, which is too large for GitHub.
 
